@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    body {
+      background-color: #191919;
+      font-family: sans-serif;
+    }
+
+    h2,
+    input,
+    p {
+      color: #d4d4d4;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .calculator {
+      margin: 50px;
+    }
+
+    .calculator__input {
+      margin-bottom: 32px;
+      background-color: transparent;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .calculator__input:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Расчитай цену!</h2>
+
+  <div class="calculator" id="calculator">
+    <p>Количество блоков</p>
+    <input class="calculator__input" id="input-blocks" type="number" placeholder="Введи расстояние в блоках">
+
+    <p>Количество сундуков</p>
+    <input class="calculator__input" id="input-chests" type="number" placeholder="Введи количество сундуков">
+
+    <p>Цена</p>
+    <input class="calculator__input" id="input-price" type="number" readonly placeholder="Тут цена">
+  </div>
+</body>
+
+<script>
+  const input = document.getElementById("input-blocks");
+
+  input.style.color = 'red';
+</script>
+
+</html>
